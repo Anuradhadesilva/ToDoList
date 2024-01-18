@@ -52,6 +52,7 @@
 		EBA056B02B57F22A00FE7E99 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA056AF2B57F22A00FE7E99 /* ProfileViewViewModel.swift */; };
 		EBA056B22B57F33A00FE7E99 /* NewItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA056B12B57F33A00FE7E99 /* NewItemListView.swift */; };
 		EBA056B42B57F35400FE7E99 /* NewitemListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA056B32B57F35400FE7E99 /* NewitemListViewViewModel.swift */; };
+		EBB4C7402B58D3B200213846 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4C73F2B58D3B200213846 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		EBA056AF2B57F22A00FE7E99 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
 		EBA056B12B57F33A00FE7E99 /* NewItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemListView.swift; sourceTree = "<group>"; };
 		EBA056B32B57F35400FE7E99 /* NewitemListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewitemListViewViewModel.swift; sourceTree = "<group>"; };
+		EBB4C73F2B58D3B200213846 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				EBA0569F2B57EFE500FE7E99 /* RegisterView.swift */,
 				EBA056A32B57F01B00FE7E99 /* ToDoListItemView.swift */,
 				EBA056B12B57F33A00FE7E99 /* NewItemListView.swift */,
+				EBB4C73F2B58D3B200213846 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				EBA056A42B57F01B00FE7E99 /* ToDoListItemView.swift in Sources */,
 				EBA0564E2B57E90B00FE7E99 /* ToDoListApp.swift in Sources */,
 				EBA056B02B57F22A00FE7E99 /* ProfileViewViewModel.swift in Sources */,
+				EBB4C7402B58D3B200213846 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
