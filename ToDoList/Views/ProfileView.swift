@@ -13,39 +13,53 @@ struct ProfileView: View {
         NavigationView{
             VStack{
                 if let user = viewModel.user{
+               
+                    Text("Profile")
+                        .font(.title.bold())
                     Image(systemName: "person.circle")
                          .resizable()
                          .frame(width: 100,height: 100)
-                         .padding()
+                         .padding(.bottom,40)
                      VStack(alignment:.leading){
-                         HStack{
-                             Text("Name:")
-                                 .bold()
-                             Text(user.name)
+                         List{
+                             HStack{
+                                 Text("Name:")
+                                     .bold()
+                                 Text(user.name)
+                             }
+                             HStack{
+                                 Text("Email:")
+                                     .bold()
+                                 Text(user.email)
+                             }
+                             HStack{
+                                 Text("Member Since:")
+                                     .bold()
+                                 Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
+                             }
                          }
-                         HStack{
-                             Text("Email:")
-                                 .bold()
-                             Text(user.email)
-                         }
-                         HStack{
-                             Text("Member Since")
-                                 .bold()
-                             Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
-                         }
+                         .frame(width: 400,height: 220)
+                         .cornerRadius(8)
+                       
                      }
                      Button("Log Out"){
                          viewModel.logOut()
                      }
+                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 40)
+                     .background(Color.blue)
+                     .foregroundColor(.white)
+                     .font(.title3.bold())
+                     .cornerRadius(5)
                      .tint(.red)
                      .padding()
                      Spacer()
+                    
                 } else{
                     Text("Loading profile......")
                 }
                
             }
-            .navigationTitle("Profile")
+            
         }
         .onAppear{
             viewModel.fetchUser()
