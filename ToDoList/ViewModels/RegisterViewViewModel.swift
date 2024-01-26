@@ -23,9 +23,11 @@ class RegisterViewViewModel: ObservableObject{
         
         Auth.auth().createUser(withEmail: email, password: password){ [weak self] result,error in
             guard let userId = result?.user.uid else{
+                print("Error creating user:\(String(describing: error?.localizedDescription))")
                 return
             }
             self?.insertUserRecord(id: userId)
+            print("User created successfully. Email: \(self?.email ?? "N/A")")
         }
     }
     private func insertUserRecord(id:String){
